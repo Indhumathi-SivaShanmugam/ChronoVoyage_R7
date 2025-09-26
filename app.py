@@ -190,8 +190,11 @@ footer {{ visibility: hidden; }}
 st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 
 # Define the question sets
+# Define the question sets
 question_sets = {
-    "SET 1": {
+
+    #SET 1
+    "priya": {
         "question": "In which year was the idea of a global ___________ for sharing i__________ first proposed?",
         "notes": """
         <ul style="text-align: left; margin-left: 1rem; padding-left: 1rem;">
@@ -204,7 +207,24 @@ question_sets = {
         </ul>
         """
     },
-    "SET 2": {
+
+    "sandeep": {
+        "question": "In which year was the idea of a global ___________ for sharing i__________ first proposed?",
+        "notes": """
+        <ul style="text-align: left; margin-left: 1rem; padding-left: 1rem;">
+        <li>Strictly Enter your Team name properly as the question varies according to each team.</li>
+        <li>Each blank hides  critical keywords.</li>
+        <li>Only exact phrasing leads to the right year.</li>
+        <li>The ___ are not to scale , treat them just as a fill up entirely .</li>
+         <li>Think about historic milestones in science and technology.</li>
+        <li>Tune your words like a radio — precision is everything.</li>
+        </ul>
+        """
+    },
+    
+    #SET 2
+
+    "kishore": {
         "question": "In which year was the first __________ Engine concept, a m____________ c__________machine, introduced?",
          "notes": """
         <ul style="text-align: left; margin-left: 1rem; padding-left: 1rem;">
@@ -218,7 +238,36 @@ question_sets = {
         """
     },
 
-    "SET 3": {
+    "bug busters": {
+        "question": "In which year was the first __________ Engine concept, a m____________ c__________machine, introduced?",
+         "notes": """
+        <ul style="text-align: left; margin-left: 1rem; padding-left: 1rem;">
+        <li>Strictly Enter your Team name properly as the question varies according to each team.</li>
+        <li>Each blank hides  critical keywords.</li>
+        <li>Only exact phrasing leads to the right year.</li>
+        <li>The ___ are not to scale , treat them just as a fill up entirely .</li>
+         <li>Think about historic milestones in science and technology.</li>
+        <li>Tune your words like a radio — precision is everything.</li>
+        </ul>
+        """
+    },
+
+    #SET 3
+
+    "vichu": {
+        "question": "In which year was the first ________ by Apple, a revolutionary s_________, announced to the public?",
+         "notes": """
+        <ul style="text-align: left; margin-left: 1rem; padding-left: 1rem;">
+        <li>Strictly Enter your Team name properly as the question varies according to each team.</li>
+        <li>Each blank hides  critical keywords.</li>
+        <li>Only exact phrasing leads to the right year.</li>
+        <li>The ___ are not to scale , treat them just as a fill up entirely .</li>
+         <li>Think about historic milestones in science and technology.</li>
+        <li>Tune your words like a radio — precision is everything.</li>
+        </ul>
+        """
+},
+    "akilesh": {
         "question": "In which year was the first ________ by Apple, a revolutionary s_________, announced to the public?",
          "notes": """
         <ul style="text-align: left; margin-left: 1rem; padding-left: 1rem;">
@@ -288,4 +337,5 @@ if team_name:
         """
         st.markdown(notes_html, unsafe_allow_html=True)
     else:
+
         st.error("Set not found. Please check the spelling and try again. Valid sets are: SET 1, SET 2, SET 3")
