@@ -155,26 +155,6 @@ h3.tagline {{
     margin-bottom: 0.5rem !important;
 }}
 
-/* Resource link styling */
-.resource-link {{
-    font-family: 'Oswald', sans-serif !important;
-    font-size: 1.2rem !important;
-    color: #dfcba2 !important;
-    text-align: center !important;
-    text-decoration: none !important;
-    display: block !important;
-    margin: 1rem 0 !important;
-    padding: 0.5rem !important;
-    border: 1px solid #dfcba2 !important;
-    border-radius: 5px !important;
-    transition: all 0.3s ease !important;
-}}
-
-.resource-link:hover {{
-    background-color: rgba(223, 203, 162, 0.1) !important;
-    color: #ffffff !important;
-}}
-
 /* Remove all default Streamlit styling */
 .stMarkdown {{
     background: transparent !important;
@@ -211,6 +191,7 @@ st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
 
 # Define the question sets
 question_sets = {
+
     #SET 1
     "priya": {
         "question": "In which year was the idea of a global ___________ for sharing i__________ first proposed?",
@@ -241,6 +222,7 @@ question_sets = {
     },
     
     #SET 2
+
     "kishore": {
         "question": "In which year was the first __________ Engine concept, a m____________ c__________machine, introduced?",
          "notes": """
@@ -270,6 +252,7 @@ question_sets = {
     },
 
     #SET 3
+
     "vichu": {
         "question": "In which year was the first ________ by Apple, a revolutionary s_________, announced to the public?",
          "notes": """
@@ -282,8 +265,7 @@ question_sets = {
         <li>Tune your words like a radio — precision is everything.</li>
         </ul>
         """
-    },
-    
+},
     "akilesh": {
         "question": "In which year was the first ________ by Apple, a revolutionary s_________, announced to the public?",
          "notes": """
@@ -296,7 +278,7 @@ question_sets = {
         <li>Tune your words like a radio — precision is everything.</li>
         </ul>
         """
-    },
+},
 }
 
 # --- Streamlit App Layout ---
@@ -304,6 +286,7 @@ question_sets = {
 # Title and Tagline
 st.markdown("<h1 class='title'>Round 7 - Signals through Air</h1>", unsafe_allow_html=True)
 st.markdown("<h3 class='tagline'>The wireless age begins — invisible waves carry the last pieces of the mystery.</h3>", unsafe_allow_html=True)
+
 
 # Input Section - Using HTML to properly contain everything
 input_html = f"""
@@ -352,36 +335,5 @@ if team_name:
         </div>
         """
         st.markdown(notes_html, unsafe_allow_html=True)
-        
-        # Display the Resources container
-        resources_html = f"""
-        <div class="custom-container">
-            <div class="notes-title">Resources:</div>
-            <div class="notes-content">
-                <p>Need help? Use our AI assistant:</p>
-                <a href="https://245cd493af69.ngrok-free.app/ask" target="_blank" class="resource-link">
-                    🎯 AI Assistant - Click Here for Help
-                </a>
-                <p><small>This tool can help you with research and finding the correct keywords for your question.</small></p>
-            </div>
-        </div>
-        """
-        st.markdown(resources_html, unsafe_allow_html=True)
-        
     else:
-        st.error("Team not found. Please check the spelling and try again.")
-
-# Always show the Resources container (even before team name is entered)
-resources_html = f"""
-<div class="custom-container">
-    <div class="notes-title">Resources:</div>
-    <div class="notes-content">
-        <p>Need help? Use our AI assistant:</p>
-        <a href="https://245cd493af69.ngrok-free.app/ask" target="_blank" class="resource-link">
-            🎯 AI Assistant - Click Here for Help
-        </a>
-        <p><small>This tool can help you with research and finding the correct keywords for your question.</small></p>
-    </div>
-</div>
-"""
-st.markdown(resources_html, unsafe_allow_html=True)
+        st.error("Set not found. Please check the spelling and try again. Valid sets are: SET 1, SET 2, SET 3")
